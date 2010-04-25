@@ -1,0 +1,47 @@
+notes
+
+used basic historical data from freedom house.  excludes their territory data -- so no e.g. puerto rico or palestinian occupied territories
+
+long form "none" on factbook => take as same as short form
+
+146     of
+127     Republic
+17      Kingdom
+8       the
+8       Democratic
+6       State
+6       People's
+5       United
+4       and
+4       Islamic
+4       Arab
+3       States
+3       Socialist
+3       Principality
+3       Islands
+3       Guinea
+3       Federal
+3       Commonwealth
+
+
+>> pp f.map {|n| n.split}.flatten.uniq_c.map{|k,v| [v,k]}.sort.select {|c,_| c>2}
+[[3, "Commonwealth"],
+ [3, "Federal"],
+ [3, "Guinea"],
+ [3, "Islands"],
+ [3, "Principality"],
+ [3, "Socialist"],
+ [3, "States"],
+ [4, "Arab"],
+ [4, "Islamic"],
+ [4, "and"],
+ [5, "United"],
+ [6, "People's"],
+ [6, "State"],
+ [8, "Democratic"],
+ [8, "the"],
+ [17, "Kingdom"],
+ [127, "Republic"],
+ [146, "of"]]
+
+
